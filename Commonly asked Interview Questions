@@ -28,3 +28,25 @@ A. DOM stands for Document Object Model. The DOM represents an HTML document wit
    Each branch of the tree ends in a node, and each node contains object.
    React keeps a lightweight representation of the real DOM in the memory, and that is known as the virtual DOM.
    When the state of an object changes, the virtual DOM, rather than updating all the objects.
+
+Q. What is the difference between Element and Component?
+A. A React element is an object representation of a DOM node. Elements are immutable i,e once created cannot be changed. We cannot use React Hooks with elements as elements are immutable. Elements are light, stateless and hence it is faster. The element does not have any methods.
+   A component encapsulates a DOM tree. The state in a component is mutable. React hooks can be used with only functional components. It is comparatively slower than elements. Each component has its life cycle methods.
+   
+Q. How to create components in React?
+A. 
+   Function Components: 
+   This is the simplest way to create a component. Those are pure JavaScript functions that accept props object as first parameter and return React elements:
+
+   function Greeting({ message }) {
+    return <h1>{`Hello, ${message}`}</h1>}
+   
+   Class Components: 
+   You can also use ES6 class to define a component. The above function component can be written as:
+
+   class Greeting extends React.Component {
+   render() {
+    return <h1>{`Hello, ${this.props.message}`}</h1>}}
+    
+Q. When to use a Class Component over a Function Component?
+A. If the component needs state or lifecycle methods then use class component otherwise use function component. However, from React 16.8 with the addition of Hooks, you could use state , lifecycle methods and other features that were only available in class component right in your function component.
