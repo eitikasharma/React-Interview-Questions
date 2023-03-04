@@ -50,3 +50,10 @@ A.
     
 Q. When to use a Class Component over a Function Component?
 A. If the component needs state or lifecycle methods then use class component otherwise use function component. However, from React 16.8 with the addition of Hooks, you could use state , lifecycle methods and other features that were only available in class component right in your function component.
+
+Q. What are pure functions?
+A. Functions which returns same result if same arguments are passed. example., Reducer is a pure function
+
+Q. What is a state?
+A. It is an object that holds some info that may change over the lifetime of the component.
+
