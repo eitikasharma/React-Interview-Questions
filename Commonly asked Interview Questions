@@ -57,3 +57,20 @@ A. Functions which returns same result if same arguments are passed. example., R
 Q. What is a state?
 A. It is an object that holds some info that may change over the lifetime of the component.
 
+Q. What are props in React?
+A. Props are inputs to components. They are single values or objects containing a set of values that are passed to components on creation using a naming convention similar to HTML-tag attributes. They are data passed down from a parent component to a child component.
+
+Q. What is the difference between state and props?
+A. Both props and state are plain JavaScript objects. While both of them hold information that influences the output of render, they are different in their functionality with respect to component. Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function.
+
+Q. Why should we not update the state directly?
+A. If you try to update state directly then it won't re-render the component.
+   //Wrong
+   this.state.message = 'Hello world'
+   Instead use setState() method. It schedules an update to a component's state object. When state changes, the component responds by re-rendering.
+
+   //Correct
+   this.setState({ message: 'Hello World' })
+   Note: You can directly assign to the state object either in constructor or using latest javascript's class field declaration syntax.
+   
+   
