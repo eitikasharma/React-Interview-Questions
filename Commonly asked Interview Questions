@@ -73,4 +73,18 @@ A. If you try to update state directly then it won't re-render the component.
    this.setState({ message: 'Hello World' })
    Note: You can directly assign to the state object either in constructor or using latest javascript's class field declaration syntax.
    
-   
+Q. What is a Component?
+A. Helps to split the UI into independent, reusable pieces and think about each piece individually.
+
+Q. Lifecycle of Class Component?
+A. 1.) MOUNTING-
+       -Constructor call- Initialize the skeleton state.
+       -Render- Returns the HTML which we want to display.
+       -Component Did Mount- Set the state.
+       -Re-render
+   2.) UPDATE-
+      -Component Did Update- Called on click of a button.
+                             We get previous props, previous state compares with this.state.
+   3.) UNMOUNTING-
+      -Component Will Unmount- When a component is removed from DOM.
+                               Release the spcae
